@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IssueRepository extends JpaRepository<IssueEndity, Long>
 {
-	
+	java.util.List<IssueEndity> findByUser_Id(Long userId);
 }

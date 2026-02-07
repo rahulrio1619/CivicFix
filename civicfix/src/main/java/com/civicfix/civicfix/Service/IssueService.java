@@ -100,4 +100,8 @@ public class IssueService {
 		return filtered;
 	}
 
+	public java.util.List<IssueEndity> getIssuesByUserId(Long userId) {
+		return issueRepository.findByUser_Id(userId);
+	}
+
 }

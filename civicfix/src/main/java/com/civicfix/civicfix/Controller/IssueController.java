@@ -32,6 +32,11 @@ public class IssueController {
 		return issueService.getIssuesByCategoryId(categoryId);
 	}
 
+	@GetMapping("/issue/readbyuser/{userId}")
+	public java.util.List<IssueEndity> readByUser(@PathVariable Long userId) {
+		return issueService.getIssuesByUserId(userId);
+	}
+
 	@PutMapping("/issue/update/{id}")
 	public IssueEndity update(@PathVariable Long id, @RequestBody IssueEndity issue) {
 		return issueService.updateIssue(id, issue);
